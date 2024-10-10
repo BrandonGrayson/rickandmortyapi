@@ -7,9 +7,9 @@ const port = 3000
 app.get('/', async (req, res) => {
     try {
         const response = await axios.get("https://rickandmortyapi.com/api/character")
-        const data = await res.json(response.data.results);
-        const characters = data
-        return characters
+        const characters = response.data.results;
+        console.log(characters)
+        res.json(characters)
     } catch(error) {
         console.log(`There was an Error ${error}`)
         throw new Error(error)
