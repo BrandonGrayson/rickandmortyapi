@@ -1,0 +1,9 @@
+type Query {
+    characters: String
+}
+
+type Character {
+    id: Int
+    name: String
+    age: Int
+}
